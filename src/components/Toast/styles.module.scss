@@ -1,0 +1,152 @@
+.toastContainer {
+  width: 24rem;
+  padding: 0.75rem 1rem 1rem;
+  border-radius: 0.3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+
+  position: fixed;
+  z-index: 999;
+  
+  font-size: 1rem;
+  color: #FFF;
+  box-shadow: 0.5rem 0.5rem 1.25rem rgba(0, 0, 0, 0.2);
+  
+  display: flex;
+  flex-direction: column;
+
+  svg {
+    font-size: 1.6rem;
+    color: #FFF;
+    align-self: flex-end;
+    cursor: pointer;
+    transition: filter 0.3s;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
+  }
+
+  &.success {
+    background: #38A169;
+    transition: background 0.4s;
+
+    &:hover {
+      background: #2F855A;
+    }
+  }
+
+  &.error {
+    background: #E53E3E;
+    transition: background 0.4s;
+
+    &:hover {
+      background: #C53030;
+    }
+  }
+
+  &.warning {
+    background: #ED8936;
+    transition: background 0.4s;
+
+    &:hover {
+      background: #DD6B20;
+    }
+  }
+}
+
+.toast-left {
+  top: 7rem;
+  left: 1.4rem;
+  animation: toast-in-left 0.3s ease-in-out;
+}
+
+.toast-right {
+  top: 7rem;
+  right: 1.4rem;
+  animation: toast-in-right 0.3s ease-in-out;
+}
+
+.toast-middle {
+  top: 7rem;
+  margin: 0 auto;
+  animation: toast-in-middle 0.3s ease-in-out;
+}
+
+.toast-closing {
+  animation: toast-in-closing 0.5s ease-in-out;
+}
+
+.toastContent {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+
+  svg {
+    font-size: 2.2rem;
+    margin-right: 0.5rem;
+    align-self: center;
+    flex-shrink: 0;
+    word-break: break-all;
+    cursor: inherit;
+
+    &:hover {
+      filter: brightness(1);
+    }
+  }
+
+  p {
+    font-size: 1rem !important;
+    margin-top: 0 !important;
+  }
+}
+
+@keyframes toast-in-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes toast-in-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes toast-in-middle {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes toast-in-closing {
+  from {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 425px) {
+  .toastContainer {
+    width: 20rem;
+    padding: 0.5rem 1rem 0.7rem;
+    font-size: 0.9rem;
+  
+    svg {
+      font-size: 1.5rem;
+    }
+  }
+}

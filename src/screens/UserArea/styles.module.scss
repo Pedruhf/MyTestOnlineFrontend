@@ -1,0 +1,124 @@
+// MOBILE STYLIZATION
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  padding: 11rem 2.5rem 0;
+
+  background: var(--primary-background);
+  color: #FFF;
+  font-family: Poppins, sans-serif;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  width: 90vw;
+  max-width: 1200px;
+  padding: 1.2rem;
+  border-radius: 0.6rem;
+
+  box-shadow: 1rem 1rem 2.25rem rgba(0, 0, 0, 0.5);
+  position: relative;
+  background: rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.nav {
+  align-self: flex-start;
+
+  .navItem {
+    padding: 0.4rem 0.5rem;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+
+    transition: background 0.3s;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+
+    svg {
+      font-size: 2rem;
+      color: #FFF;
+      margin-right: 0.5rem;
+    }
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    &+ .navItem {
+      margin-top: 1rem;
+    }
+
+    &.active {
+      background-color: rgba(200, 200, 200, 0.4);
+    }
+  }
+
+  
+
+  hr {
+    margin-top: 0.4rem;
+    height: 0;
+    opacity: 0.4;
+  }
+}
+
+@media (min-width: 426px) {
+  .card {
+    padding: 1.2rem 1.6rem;
+  }
+
+  .nav {
+    .navItem {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .main {
+    background: var(--secundary-background);
+  }
+  
+  .card {
+    padding: 1.4rem 2rem;
+  }
+
+  .nav {
+    .navItem {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    display: flex;
+    padding-left: 1.2rem;
+  }
+
+  .nav {
+    height: 100%;
+    margin-right: 2rem;
+    padding-right: 1.4rem;
+    border-right: 1px solid #A9A9A9;
+
+    .navItem {
+      width: max-content;
+      font-size: 1.2rem;
+    }
+
+    hr {
+      display: none;
+    }
+  }
+}

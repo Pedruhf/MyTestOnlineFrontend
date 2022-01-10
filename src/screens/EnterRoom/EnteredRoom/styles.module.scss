@@ -1,0 +1,151 @@
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 6rem 1.4rem;
+
+  background: var(--primary-background);
+  font-family: Poppins, sans-serif;
+  color: #FFF;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.roomIdentification {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  strong {
+    font-size: 1.4rem;
+    word-break: break-all;
+
+    &+ span {
+      cursor: pointer;
+      transition: filter 0.3s;
+      font-size: 1.1rem;
+
+      &:hover {
+        filter: brightness(0.9)
+      }
+    }
+  }
+}
+
+.content {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  
+  margin-top: 2.5rem;
+
+  h1 {
+    align-self: flex-start;
+    font-size: 1.4rem;
+  }
+
+  p {
+    align-self: flex-start;
+    font-size: 1rem;
+    opacity: 0.7;
+    margin-bottom: 1rem;
+  }
+}
+
+.questionsContainer {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+
+  button {
+    height: 2.4rem;
+    width: max-content;
+    padding: 0 1rem;
+    margin-top: 2rem;
+
+    border: 0;
+    border-radius: 0.4rem;
+    outline: 0;
+
+    background: var(--secundary-purple);
+    color: #FFF;
+    font-size: 1rem;
+    align-self: flex-end;
+  }
+}
+
+.questionCard {
+  padding: 1rem;
+  border-radius: 0.4rem;
+
+  display: flex;
+  flex-direction: column;
+
+  background: rgba(255, 255, 255, 0.25);
+
+  strong {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 1rem;
+    opacity: 1;
+  }
+
+  &+ .questionCard {
+    margin-top: 2rem;
+  }
+}
+
+.alternativesContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.alternativesCard {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+
+  input {
+    width: 16px;
+    height: 16px;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+  }
+}
+
+@media (min-width: 426px) {
+}
+
+@media (min-width: 769px) {
+  .main {
+    background: var(--secundary-background);
+    padding: 9rem 4rem;
+  }
+
+  .roomIdentification {
+    align-items: center;
+    flex-direction: row;
+  
+    strong {
+      font-size: 1.3rem;
+      word-break: break-all;
+      padding-right: 0.4rem;
+      margin-right: 0.4rem;
+      border-right: 1px solid #FFF;
+  
+      &+ span {
+        cursor: pointer;
+        transition: filter 0.3s;
+        font-size: 1.1rem;
+  
+        &:hover {
+          filter: brightness(0.9)
+        }
+      }
+    }
+  }
+}

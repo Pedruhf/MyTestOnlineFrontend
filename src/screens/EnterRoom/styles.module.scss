@@ -1,0 +1,96 @@
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 8rem 1.4rem;
+
+  background: var(--primary-background);
+  font-family: Poppins, sans-serif;
+  color: #FFF;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-size: 1.1rem;
+  }
+}
+
+.controller {
+  width: max-content;
+  margin-top: 1rem;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  input {
+    height: 3rem;
+    width: 15rem;
+    padding: 0 2.5rem 0 0.75rem;
+
+    border: 1px solid #FFF;
+    border-radius: 0.6rem;
+    outline: 0;
+
+    background: transparent;
+    color: #FFF;
+    font-size: 1rem;
+  }
+
+  svg {
+    position: absolute;
+    right: 0.5rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 426px) {
+  .controller {
+    input {
+      height: 3.6rem;
+      width: 18rem;
+      padding: 0 3rem 0 1rem;
+  
+      border-radius: 0.6rem;
+      outline: 0;
+  
+      font-size: 1rem;
+    }
+  
+    svg {
+      right: 0.5rem;
+      font-size: 1.7rem;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .main {
+    background: var(--secundary-background);
+
+    p {
+      font-size: 1.4rem;
+    }
+  }
+
+  .controller {
+    input {
+      height: 4rem;
+      width: 24rem;
+      padding: 0 3rem 0 1rem;
+  
+      border-radius: 0.8rem;
+      outline: 0;
+  
+      font-size: 1.2rem;
+    }
+  
+    svg {
+      right: 0.5rem;
+      font-size: 1.7rem;
+    }
+  }
+}

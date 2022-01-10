@@ -1,0 +1,94 @@
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 8rem 5vw 10rem;
+
+  background: var(--primary-background);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 90vw;
+  max-width: 600px;
+  padding: 2rem 1.2rem 2.4rem;
+
+  border-radius: 0.6rem;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 1rem 1rem 2.25rem rgba(0, 0, 0, 0.5);
+  color: #FFF;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  svg {
+    font-size: 7rem;
+  }
+
+  h1 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  p {
+    margin-top: 1rem;
+    text-align: center;
+
+    strong {
+      text-decoration: underline;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    &+ p {
+      margin-top: 0.7rem;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .container {
+    background: var(--secundary-background);
+  }
+
+  .card {
+    width: 90vw;
+    max-width: 800px;
+    padding: 2rem 1.2rem 2.4rem;
+  
+    svg {
+      font-size: 12rem;
+    }
+  
+    h1 {
+      margin-top: 1rem;
+      font-size: 2rem;
+    }
+  
+    p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+  
+      a {
+        color: inherit;
+        text-decoration: underline;
+      }
+  
+      &+ p {
+        margin-top: 0.7rem;
+      }
+    }
+  }
+}

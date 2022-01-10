@@ -1,0 +1,77 @@
+.content {
+  width: 100%;
+  margin-top: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  form {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    
+    .field {
+      width: 100%;
+      max-width: 30rem;
+      display: flex;
+      align-items: center;
+      align-self: flex-start;
+
+      position: relative;
+      
+      input {
+        width: 100%;
+        padding: 0.5rem 1rem;
+    
+        border-radius: 0.6rem;
+        border: 1px solid var(--light-gray);
+    
+        color: #FFF;
+        font-size: 0.9rem;
+    
+        background: rgb(33, 16, 59);
+        outline: none;
+        align-self: flex-start;
+    
+        &[type=number]::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+        }
+      }
+
+      svg {
+        font-size: 1.4rem;
+        position: absolute;
+        right: 0.6rem;
+        cursor: pointer;
+        transition: filter 0.3s;
+
+        &:hover {
+          filter: brightness(0.8);
+        }
+      }
+
+      & + .field {
+        margin-top: 0.5rem;
+      }
+    }
+
+    button {
+      height: 2.4rem;
+      max-width: max-content;
+      padding: 0 1.4rem;
+      margin-top: 1rem;
+  
+      border: 1px solid #FFF;
+      border-radius: 0.8rem;
+  
+      font-size: 1.2rem;
+      color: #FFF;
+      background: #7327d1;
+  
+      align-self: flex-end;
+    }
+  }
+}

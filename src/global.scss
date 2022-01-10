@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  --primary-purple: #893aa2;
+  --secundary-purple: #7327d1;
+  --light-secundary-purple: rgba(115, 39, 209, 0.75);
+  --darken-purple: #2d0b3d;
+
+  --primary-background: #723BDA;
+  --secundary-background: #834CBC;
+
+  --primary-blue: #00fdfd;
+
+  --light-gray: #dfdfdf;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  font: 400 1rem Roboto, sans-serif;
+}
+
+input,
+textarea,
+button {
+  font-family: Poppins, sans-serif;
+}
+
+button {
+  cursor: pointer;
+  transition: filter 0.3s;
+
+  &:hover {
+    filter: brightness(0.85);
+  }
+}

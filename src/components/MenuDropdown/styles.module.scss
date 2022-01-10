@@ -1,0 +1,152 @@
+.menuDropdown {
+  width: 5rem;
+  border-radius: 0.4rem;
+
+  position: absolute;
+  top: 3rem;
+  right: 1.5rem;
+
+  font-family: Roboto, sans-serif;
+
+  overflow: hidden;
+
+  .menuItem {
+    height: 3.5rem;
+    border-radius: 0.8rem;
+
+    text-decoration: none;
+    color: var(--primary-background);
+    background: #FFF;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    overflow: hidden;
+    transition: background 0.3s ease-out;
+
+    span {
+      font-size: 0.9rem;
+    }
+
+    &:hover {
+      filter: brightness(0.95);
+    }
+
+    &+.menuItem {
+      margin-top: 0.2rem;
+    }
+
+    &+div {
+      margin-top: 0.2rem;
+
+      & .menuItem {
+        background: transparent;
+        color: #FFF;
+        border: 1px solid #FFF;
+
+        &:hover {
+          filter: brightness(0.85);
+        }
+      }
+    }
+  }
+}
+
+.modal-opening {
+  animation: open-modal 0.3s ease-in-out;
+}
+
+.modal-closing {
+  animation: close-modal 0.3s ease-in-out;
+}
+
+@keyframes open-modal {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes close-modal {
+  from {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+@media (min-width: 426px) {
+  .menuDropdown {
+    width: 6rem;
+
+    top: 4.2rem;
+    right: 1.7rem;
+
+    .menuItem {
+      border-radius: 0.8rem;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .menuDropdown {
+    width: 8rem;
+
+    top: 5.2rem;
+    right: 2.6rem;
+
+    .menuItem {
+      height: 4rem;
+      border-radius: 1rem;
+
+      span {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .menuDropdown {
+    width: 8rem;
+
+    top: 6.5rem;
+    right: 2.6rem;
+
+    .menuItem {
+      height: 4rem;
+      border-radius: 1.1rem;
+      
+      span {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .menuDropdown {
+    width: 9rem;
+
+    top: 6.5rem;
+    right: 3.2rem;
+
+    .menuItem {
+      height: 4rem;
+      border-radius: 1.1rem;
+      
+      span {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

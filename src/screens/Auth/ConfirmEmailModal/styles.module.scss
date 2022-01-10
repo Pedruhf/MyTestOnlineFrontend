@@ -1,0 +1,182 @@
+.modalContainer {
+  width: 100%;
+  height: 100%;
+  
+  background: rgba(0, 0, 0, 0.5);
+  
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  z-index: 100;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.modal-closing {
+    animation: close-modal 0.5s ease-in-out;
+  }
+
+  & .modal-opening {
+    animation: open-modal 0.5s ease-in-out;
+  }
+
+  & .modal-closing {
+    animation: close-modal 0.5s ease-in-out;
+  }
+}
+
+.modalCard {
+  width: 90%;
+  padding: 1rem 1.4rem 2rem;
+  border-radius: 0.4rem;
+
+  background: #FFF;
+  color: #000;
+  box-shadow: 1rem 1rem 2.25rem rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+
+  svg {
+    align-self: flex-end;
+    font-size: 2rem;
+    color: #000;
+    cursor: pointer;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  h1 {
+    font-size: 1.2rem;
+    
+    &+ h1 {
+      font-size: 1rem;
+      margin-top: 0.6rem;
+    }
+
+    &+ p {
+      margin-top: 1.4rem;
+    }
+  }
+
+  p {
+    font-size: 0.9rem;
+
+    &+ p {
+      margin-top: 0.8rem;
+    }
+
+    &+ span {
+      margin-top: 1.4rem;
+      opacity: 0.6;
+    }
+
+    strong {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
+  span {
+    font-size: 0.8rem;
+  }
+}
+
+@keyframes open-modal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes close-modal {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@media (min-width: 769px) {
+  .modalCard {
+    max-width: 768px;
+    padding: 1.2rem 2rem 2.4rem;
+  
+    h1 {
+      font-size: 1.6rem;
+      
+      &+ h1 {
+        font-size: 1.25rem;
+        margin-top: 0.6rem;
+      }
+  
+      &+ p {
+        margin-top: 1.6rem;
+      }
+    }
+  
+    p {
+      font-size: 1rem;
+  
+      &+ p {
+        margin-top: 0.2rem;
+      }
+  
+      &+ span {
+        margin-top: 1.2rem;
+        opacity: 0.6;
+      }
+
+    }
+  
+    span {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media (min-width: 1441px) {
+  .modalCard {
+    max-width: 1000px;
+    padding: 1.2rem 1.6rem 3rem 2.4rem;
+  
+    h1 {
+      font-size: 1.8rem;
+      
+      &+ h1 {
+        font-size: 1.4rem;
+        margin-top: 0.6rem;
+      }
+  
+      &+ p {
+        margin-top: 1.6rem;
+      }
+    }
+  
+    p {
+      font-size: 1.1rem;
+  
+      &+ p {
+        margin-top: 0.2rem;
+      }
+  
+      &+ span {
+        margin-top: 1.8rem;
+        opacity: 0.6;
+      }
+
+    }
+  
+    span {
+      font-size: 0.9rem;
+    }
+  }
+}
