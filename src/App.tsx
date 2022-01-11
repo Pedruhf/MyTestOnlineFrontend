@@ -16,6 +16,7 @@ import { ErrorPage } from "./screens/Error";
 import { CreatedRoom } from "./screens/CreateRoom/CreatedRoom";
 import { EnteredRoom } from "./screens/EnterRoom/EnteredRoom";
 import { ProfessorRoute } from "./routes/ProfessorRoute";
+import { Answers } from "./screens/Answers";
 
 
 function App() {
@@ -76,6 +77,11 @@ function App() {
             <Assessment />
           </ProfessorRoute>
         } />
+        <Route path="/avalicoes/respostas/:id" element={
+          <ProfessorRoute>
+            <Answers />
+          </ProfessorRoute>
+        } />
         <Route path="/salas/criar" element={
           <ProfessorRoute>
             <CreateRoom />
@@ -96,6 +102,7 @@ function App() {
             <EnteredRoom />
           </AuthRoute>
         } />
+        
         <Route path="/auth" element={<Auth />} />
         <Route path="/confirmed-email" element={<ConfirmedEmail />} />
         <Route path="/reseted-password" element={<ResetedPassword />} />

@@ -138,6 +138,7 @@ const CreateAssessment = () => {
               <p>{assessment.description}</p>
               <div className={styles.controlButtons}>
                 <Link to={`${assessment._id}`}>Abrir</Link>
+                <Link to={`/avalicoes/respostas/${assessment._id}`}>Respostas</Link>
                 <button onClick={() => handleDeleteAssessment(assessment._id)}>Excluir</button>
               </div>
             </div>
