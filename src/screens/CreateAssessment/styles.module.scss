@@ -11,7 +11,7 @@
   align-items: center;
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     align-self: flex-start;
   }
 
@@ -33,7 +33,7 @@
   align-items: center;
 
   .AssessmentAreaCard {
-    width: min(90vw, 45rem);
+    width: min(90vw, 30rem);
     padding: 1.2rem 1.5rem;
     border-radius: 0.5rem;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -47,11 +47,12 @@
     word-break: break-all;
 
     h1 {
-      font-size: 1.7rem;
+      font-size: 1.3rem;
     }
 
     p {
-      font-size: 1.2rem;
+      font-size: 1rem;
+      opacity: 0.9;
     }
 
     .controlButtons {
@@ -139,14 +140,25 @@
     background: var(--secundary-background);
 
     h1 {
-      font-size: 2rem;
+      font-size: 1.75rem;
     }
   }
 
   .AssessmentAreaContainer {
     .AssessmentAreaCard {
-      .controlButtons {
+      width: min(90vw, 40rem);
+      padding: 1.5rem;
 
+      h1 {
+        font-size: 1.75rem;
+      }
+  
+      p {
+        font-size: 1.2rem;
+        opacity: 0.8;
+      }
+
+      .controlButtons {
         a, button {
           height: 2.4rem;
           padding: 0 1rem;

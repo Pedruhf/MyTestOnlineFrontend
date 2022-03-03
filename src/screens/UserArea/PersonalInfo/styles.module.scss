@@ -10,13 +10,13 @@
   button {
     height: 2.4rem;
     max-width: max-content;
-    padding: 0 1.4rem;
+    padding: 0 1rem;
     margin-top: 2rem;
 
     border: 1px solid #FFF;
-    border-radius: 0.8rem;
+    border-radius: 0.5rem;
 
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     color: #FFF;
     background: #7327d1;
 
@@ -24,8 +24,8 @@
   }
 
   img {
-    width: 80px;
-    height: 80px;
+    width: 4.4rem;
+    height: 4.4rem;
     border-radius: 50%;
     border: 1px solid #FFF;
     margin: 0.5rem 0 1rem;
@@ -34,8 +34,8 @@
   }
 
   .defaultAvatar {
-    width: 80px;
-    height: 80px;
+    width: 4.4rem;
+    height: 4.4rem;
     border-radius: 50%;
     margin: 1.4rem 0;
     
@@ -48,20 +48,20 @@
     justify-content: center;
 
     svg {
-      font-size: 3rem;
+      font-size: 2.4rem;
       color: var(--secundary-background);
     }
   }
 
   .field {
     p {
-      font-size: 1.3rem;
+      font-size: 1rem;
       color: #CBCBCB;
     }
 
     span {
       font-size: 1rem;
-      margin-left: 0.15rem
+      margin-left: 0.1rem
     }
 
     &+ .field {
@@ -87,7 +87,7 @@
     color: #FFF;
     font-size: 0.9rem;
 
-    background: rgb(33, 16, 59);
+    background: #21103b;
     outline: none;
     align-self: flex-start;
 
@@ -121,9 +121,49 @@
 
 @media (min-width: 426px) {
   .content {
+    button {
+      padding: 0 1rem;
+  
+      border: 1px solid #FFF;
+      border-radius: 0.5rem;
+  
+      font-size: 1rem;
+    }
+
     .field {
       p {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+      }
+  
+      span {
+        font-size: 1rem;
+        margin-left: 0.15rem
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .content {
+    button {
+      padding: 0 1rem;
+      border-radius: 0.6rem;
+      font-size: 1.1rem;
+    }
+
+    img {
+      width: 5rem;
+      height: 5rem;
+    }
+  
+    .defaultAvatar {
+      width: 5rem;
+      height: 5rem;
+    }
+
+    .field {
+      p {
+        font-size: 1.1rem;
       }
   
       span {
@@ -134,32 +174,8 @@
   }
 }
 
-@media (min-width: 768px) {
-  .content {
-    img {
-      width: 90px;
-      height: 90px;
-    }
-  
-    .defaultAvatar {
-      width: 90px;
-      height: 90px;
-    }
-  }
-}
-
 @media (min-width: 1024px) {
   .content {
     margin: 0;
-
-    img {
-      width: 90px;
-      height: 90px;
-    }
-  
-    .defaultAvatar {
-      width: 90px;
-      height: 90px;
-    }
   }
 }

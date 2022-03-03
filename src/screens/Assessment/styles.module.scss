@@ -1,7 +1,7 @@
 .main {
   width: 100vw;
   min-height: 100vh;
-  padding: 6rem 1.5rem;
+  padding: 6rem 8vw;
 
   background: var(--primary-background);
   color: #FFF;
@@ -11,11 +11,12 @@
   align-items: center;
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     align-self: flex-start;
   }
 
   p {
+    font-size: 0.8rem;
     margin-top: 0.75rem;
 
     &+ p {
@@ -30,13 +31,14 @@
   align-self: flex-start;
 
   h1 {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 
   p {
-    margin: 0;
-    font-size: 1.2rem;
-    opacity: 0.6;
+    max-width: 90%;
+    margin-top: 0.2rem;
+    font-size: 1rem;
+    opacity: 0.8;
   }
 }
 
@@ -48,7 +50,7 @@
   align-items: center;
 
   .AssessmentQuestion {
-    width: min(84vw, 45rem);
+    width: min(84vw, 40rem);
     
     padding: 1rem 1.5rem;
     border-radius: 0.5rem;
@@ -61,18 +63,28 @@
     display: flex;
     flex-direction: column;
 
+    h1 {
+      font-size: 1.3rem;
+    }
+
+    p {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
     .questionAlternativesContainer {
-      margin-top: 1rem;
+      margin-top: 2rem;
 
       .questionAlternatives {
         display: flex;
         align-items: center;
   
         input[type="radio"] {
-          width: 20px;
-          height: 20px;
+          width: 16px;
+          height: 16px;
           margin-right: 1rem;
-          margin-left: 0.7rem;
+          margin-left: 0.2rem;
+          flex-shrink: 0;
         }
   
         textarea {
@@ -86,7 +98,7 @@
           color: #FFF;
           font-size: 1rem;
       
-          background: rgb(33, 16, 59);
+          background: #21103b;
           outline: none;
           resize: none;
         }
@@ -103,14 +115,14 @@
       
       button {
         height: 2.2rem;
-        padding: 0 1rem;
+        padding: 0 0.7rem;
         margin-top: 1.5rem;
-        border-radius: 0.9rem;
+        border-radius: 0.5rem;
         border: 1px solid #FFF;
         
         background: #7327d1;
         color: #FFF;
-        font-size: 1rem;
+        font-size: 0.8rem;
         outline: 0;
         
         display: flex;
@@ -164,23 +176,9 @@
   }
 }
 
-.AssessmentQuestion {
-  padding: 1rem 1.5rem;
-  border-radius: 0.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
-  background: rgba(255, 255, 255, 0.2);
-
-  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.2);
-
-  display: flex;
-  flex-direction: column;
-  word-break: break-all;
-}
-
 @media (min-width: 769px) {
   .main {
-    padding: 8rem 4rem;
+    padding: 8rem 10vw;
     background: var(--secundary-background);
 
     h1 {
@@ -189,6 +187,25 @@
   }
 
   .AssessmentQuestions {
+    .AssessmentQuestion {
+      h1 {
+        font-size: 1.6rem;
+      }
+  
+      p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+      }
+
+      .controlButtons {
+        button {
+          padding: 0 1rem;
+          border-radius: 0.6rem;
+          font-size: 1rem;
+        }
+      }
+    }
+
     .createQuestionButton {
       height: 3.4rem;
       width: 13rem;

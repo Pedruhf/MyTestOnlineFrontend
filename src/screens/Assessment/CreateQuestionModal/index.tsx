@@ -155,7 +155,7 @@ const CreateQuestionModal = ({ closeModal }: CreateQuestionModalProps) => {
           <div className={styles.questionAlternativesContainer}>
             {questionAlternatives.map((alternative, index) => {
               return (
-                <div key={index} className={styles.questionAlternatives}>
+                <div key={alternative._id} className={styles.questionAlternatives}>
                   <input
                     type="radio"
                     checked={alternative.correct}
