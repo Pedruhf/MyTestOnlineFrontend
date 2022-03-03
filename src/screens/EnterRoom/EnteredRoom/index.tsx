@@ -175,8 +175,8 @@ const EnteredRoom = () => {
   return (
     <main className={styles.main}>
       <div className={styles.roomIdentification}>
-        <strong>{classroom?.name}</strong>
-        <span># {classroom?._id}</span>
+        <span>{classroom?.name}</span>
+        <span>{classroom?._id}</span>
       </div>
     <div className={styles.content}>
       <h1>{assessment?.title}</h1>

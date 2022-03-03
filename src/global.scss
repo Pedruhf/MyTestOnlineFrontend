@@ -39,3 +39,12 @@ button {
     filter: brightness(0.85);
   }
 }
+
+
+input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  margin-right: 1rem;
+  margin-left: 0.2rem;
+  flex-shrink: 0;
+}

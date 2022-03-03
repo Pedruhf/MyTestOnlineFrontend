@@ -102,6 +102,21 @@ const CreatedRoom = () => {
     }
   }
 
+  function handleCopyRoomId(): void {
+    navigator.clipboard.writeText(classroom?._id as string);
+
+    const toastConfig = {
+      type: "success",
+      message: "Código copiado!",
+      icon: <IoIosCheckmarkCircleOutline />,
+      position: "right",
+      timeout: 2000,
+    };
+
+    setToastConfig(toastConfig);
+    setIsToastVisible(true);
+  }
+
   useEffect(() => {
     getClassroom();
     
@@ -117,7 +132,7 @@ const CreatedRoom = () => {
     <main className={styles.main}>
       <div className={styles.roomIdentification}>
         <span>{classroom?.name}</span>
-        <span># {classroom?._id}</span>
+        <span onClick={handleCopyRoomId}>{classroom?._id}</span>
       </div>
     <div className={styles.content}>
       <h1>{assessment?.title}</h1>

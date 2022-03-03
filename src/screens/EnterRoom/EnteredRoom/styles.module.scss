@@ -1,7 +1,7 @@
 .main {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
-  padding: 6rem 1.4rem;
+  padding: 8rem 1.4rem;
 
   background: var(--primary-background);
   font-family: Poppins, sans-serif;
@@ -16,14 +16,13 @@
   align-items: flex-start;
   flex-direction: column;
 
-  strong {
-    font-size: 1.4rem;
+  span {
+    font-size: 1rem;
     word-break: break-all;
 
     &+ span {
       cursor: pointer;
       transition: filter 0.3s;
-      font-size: 1.1rem;
 
       &:hover {
         filter: brightness(0.9)
@@ -33,24 +32,23 @@
 }
 
 .content {
-  width: 95%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-self: center;
-  
-  margin-top: 2.5rem;
+  margin-top: 3rem;
 
   h1 {
+    width: 100%;
     align-self: flex-start;
-    font-size: 1.4rem;
+    text-align: center;
+    font-size: 1.1rem;
   }
 
   p {
-    align-self: flex-start;
+    max-width: 100%;
+    align-self: center;
     font-size: 1rem;
     opacity: 0.7;
-    margin-bottom: 1rem;
   }
 }
 
@@ -58,44 +56,28 @@
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
-
-  button {
-    height: 2.4rem;
-    width: max-content;
-    padding: 0 1rem;
-    margin-top: 2rem;
-
-    border: 0;
-    border-radius: 0.4rem;
-    outline: 0;
-
-    background: var(--secundary-purple);
-    color: #FFF;
-    font-size: 1rem;
-    align-self: flex-end;
-  }
 }
 
 .questionCard {
+  min-width: 15rem;
+
   padding: 1rem;
-  border-radius: 0.4rem;
+  border-radius: 0.75rem;
 
   display: flex;
   flex-direction: column;
 
-  background: rgba(255, 255, 255, 0.25);
-
-  strong {
-    font-size: 1.4rem;
-  }
-
-  p {
-    font-size: 1rem;
-    opacity: 1;
-  }
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  background: rgba(255, 255, 255, 0.2);
 
   &+ .questionCard {
     margin-top: 2rem;
+  }
+
+  p {
+    align-self: flex-start;
+    margin-bottom: 1rem;
   }
 }
 
@@ -109,43 +91,105 @@
   display: flex;
   align-items: center;
 
-  input {
-    width: 16px;
-    height: 16px;
-    margin-right: 0.5rem;
-    flex-shrink: 0;
+  span {
+    font-size: 0.9rem;
   }
 }
 
 @media (min-width: 426px) {
+  .main {
+    padding: 8rem 3rem;
+  }
+
+  .questionCard {
+    width: 22rem;
+    padding: 1rem;
+    border-radius: 0.75rem;
+  }
 }
 
 @media (min-width: 769px) {
   .main {
     background: var(--secundary-background);
-    padding: 9rem 4rem;
+    padding: 8rem 5vw;
   }
 
   .roomIdentification {
-    align-items: center;
+    display: flex;
     flex-direction: row;
-  
-    strong {
-      font-size: 1.3rem;
-      word-break: break-all;
-      padding-right: 0.4rem;
-      margin-right: 0.4rem;
-      border-right: 1px solid #FFF;
-  
-      &+ span {
-        cursor: pointer;
-        transition: filter 0.3s;
-        font-size: 1.1rem;
-  
-        &:hover {
-          filter: brightness(0.9)
-        }
+
+    span {
+      font-size: 1.4rem;
+      & + span {
+        border-left: 1px solid #fff;
+        padding-left: 0.5rem;
+        margin-left: 0.5rem;
       }
+    }
+  }
+  
+  .content {
+    h1 {
+      font-size: 1.4rem;
+    }
+  
+    p {
+      max-width: 90%;
+      text-align: left;
+      font-size: 1rem;
+      opacity: 0.7;
+    }
+  }
+
+  .questionCard {
+    width: 50vw;
+    padding: 1rem 1rem 1.4rem;
+    border-radius: 0.75rem;
+
+    strong {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+  }
+
+  .alternativesCard {
+    span {
+      font-size: 1rem;
+    }
+  }
+}
+
+form {
+  button {
+    height: 2rem;
+    padding: 0 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #FFF;
+    
+    background: #7327d1;
+    color: #FFF;
+    font-size: 1rem;
+    outline: 0;
+    
+    margin-top: 1rem;
+    align-self: flex-end;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content {
+    h1 {
+      font-size: 1.6rem;
+    }
+  
+    p {
+      max-width: 70%;
+      text-align: left;
+      font-size: 1.1rem;
+      opacity: 0.7;
     }
   }
 }

@@ -128,7 +128,7 @@ const GetAssessmentModal = ({ setAssessment, closeModal }: GetAssessmentModalPro
                 <h1>{assessment.title}</h1>
                 <p>{assessment.description}</p>
                 <div className={styles.controlButtons}>
-                  <Link target="_blank" to={`/avaliacoes/${assessment._id}`}>Abrir</Link>
+                  <Link to={`/avaliacoes/${assessment._id}`}>Abrir</Link>
                 </div>
               </div>
             );

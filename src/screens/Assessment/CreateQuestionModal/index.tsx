@@ -169,7 +169,7 @@ const CreateQuestionModal = ({ closeModal }: CreateQuestionModalProps) => {
                 </div>
               );
             })}
-            <button type="button" onClick={handleCreateAlternative}>nova alternativa +</button>
+            <button type="button" onClick={handleCreateAlternative}>Nova alternativa</button>
           </div>
 
           <button type="submit">Concluir</button>
