@@ -53,3 +53,9 @@
     margin-right: 0.4rem;
   }
 }
+
+@media (min-width: 768px) {
+  .main {
+    background: var(--secundary-background);
+  }
+}

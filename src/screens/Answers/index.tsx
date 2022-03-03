@@ -39,7 +39,6 @@ const Answers = () => {
         authorization: `bearer ${userToken}`,
       }
     })
-    console.log(res);
     setAnswers(res.data);
   }
 
