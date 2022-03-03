@@ -164,13 +164,13 @@
 
 form {
   button {
-    height: 2rem;
+    height: 2.5rem;
     padding: 0 1rem;
     border-radius: 0.5rem;
-    border: 1px solid #FFF;
+    border: 1px solid var(--secundary-purple);
     
-    background: #7327d1;
-    color: #FFF;
+    background: #fff;
+    color: var(--secundary-purple);
     font-size: 1rem;
     outline: 0;
     
